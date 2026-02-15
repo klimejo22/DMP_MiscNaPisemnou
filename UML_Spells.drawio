@@ -1,0 +1,370 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.6">
+  <diagram name="Stránka-1" id="tcb7WwZKf1GEN9gyqMow">
+    <mxGraphModel dx="7747" dy="7060" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Spell&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="498" width="801" x="120" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-2" parent="KuKNCP4YiVl9ti4vlS5s-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ spellName : string&lt;/div&gt;&lt;div&gt;+ description : string&lt;/div&gt;&lt;div&gt;+ maxUses : byte&lt;/div&gt;&lt;div&gt;+ uses : byte&lt;/div&gt;&lt;div&gt;+ strength : byte&lt;/div&gt;&lt;div&gt;+ selfCast : bool&lt;/div&gt;&lt;div&gt;+ upgraded : bool&lt;/div&gt;&lt;div&gt;+ isATestSpell : bool&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="129" width="801" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-3" parent="KuKNCP4YiVl9ti4vlS5s-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="801" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-4" parent="KuKNCP4YiVl9ti4vlS5s-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ GetSpellName() : string&lt;/div&gt;&lt;div&gt;+ Upgrade() : void&lt;/div&gt;&lt;div&gt;# GetDuration(effect : DoTeffect) : byte&lt;/div&gt;&lt;div&gt;# GetDamage(damage : int) : int&lt;/div&gt;&lt;div&gt;- GetMissingHpDmg(missingHpPercent : float) : int&lt;/div&gt;&lt;div&gt;+ Use(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CanCast() : bool&lt;/div&gt;&lt;div&gt;# CheckChance(chance : float) : bool&lt;/div&gt;&lt;div&gt;# TryCrit(chance : float, damage : int) : int&lt;/div&gt;&lt;div&gt;# DealDamage(critChance : float, baseDamage : int, target : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;# SetValues() : void&lt;/div&gt;&lt;div&gt;# OnEnable() : void&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;# HasDoT(target : HealthSystem) : bool&lt;/div&gt;&lt;div&gt;- DoTIsDuplicate(dot : DoTeffect, target : HealthSystem) : bool&lt;/div&gt;&lt;div&gt;# AddDoT(dot : DoTeffect, target : HealthSystem) : void&lt;/div&gt;&lt;div&gt;# AddDoT(dot : Wet, target : HealthSystem) : void&lt;/div&gt;&lt;div&gt;# RemoveWet(target : HealthSystem) : void&lt;/div&gt;&lt;div&gt;+ Spell(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="335" width="801" y="163" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Ambush&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="138" width="418" x="-398" y="772" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-6" parent="KuKNCP4YiVl9ti4vlS5s-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ bonusDamage : int&lt;/div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="418" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-7" parent="KuKNCP4YiVl9ti4vlS5s-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="418" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-8" parent="KuKNCP4YiVl9ti4vlS5s-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ Ambush(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="66" width="418" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-9" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;ArrowShower&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="162" width="418" x="397" y="877" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-10" parent="KuKNCP4YiVl9ti4vlS5s-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;+ arrowCount : int&lt;/div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="38" width="418" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-11" parent="KuKNCP4YiVl9ti4vlS5s-9" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="418" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-12" parent="KuKNCP4YiVl9ti4vlS5s-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;- GetArrowCount(arrowCount : int) : int&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ ArrowShower(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="418" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-13" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;CocoonOfFire&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="182" width="418" x="-437" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-14" parent="KuKNCP4YiVl9ti4vlS5s-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;+ effect : HealthDoT&lt;/div&gt;&lt;div&gt;- effectRuntime : HealthDoT&lt;/div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="58" width="418" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-15" parent="KuKNCP4YiVl9ti4vlS5s-13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="418" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-16" parent="KuKNCP4YiVl9ti4vlS5s-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ CocoonOfFire(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="418" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-17" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;DashAndStab&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="182" width="418" x="-471" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-18" parent="KuKNCP4YiVl9ti4vlS5s-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;+ effect : HealthDoT&lt;/div&gt;&lt;div&gt;- effectRuntime : HealthDoT&lt;/div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="58" width="418" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-19" parent="KuKNCP4YiVl9ti4vlS5s-17" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="418" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-20" parent="KuKNCP4YiVl9ti4vlS5s-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ DashAndStab(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="418" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-21" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;Drown&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="182" width="418" x="1152" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-22" parent="KuKNCP4YiVl9ti4vlS5s-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ drownDoT : DrownDoT&lt;/div&gt;&lt;div&gt;- drownDoTRuntime : DrownDoT&lt;/div&gt;&lt;div&gt;+ wetDuration : byte&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="58" width="418" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-23" parent="KuKNCP4YiVl9ti4vlS5s-21" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="418" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-24" parent="KuKNCP4YiVl9ti4vlS5s-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;# GetDamage(damage : int) : int&lt;/div&gt;&lt;div&gt;- GetWetDuration(baseWetDuration : byte) : byte&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ Drown(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="418" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-25" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;ElectricJolt&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="428" x="1168" y="507" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-26" parent="KuKNCP4YiVl9ti4vlS5s-25" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;div&gt;+ bonusDamage : int&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="43" width="428" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-27" parent="KuKNCP4YiVl9ti4vlS5s-25" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="428" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-28" parent="KuKNCP4YiVl9ti4vlS5s-25" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ ElectricJolt(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="73" width="428" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-29" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;Execute&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="428" x="1235" y="251" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-30" parent="KuKNCP4YiVl9ti4vlS5s-29" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;div&gt;+ missingHpPercent : float&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="43" width="428" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-31" parent="KuKNCP4YiVl9ti4vlS5s-29" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="428" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-32" parent="KuKNCP4YiVl9ti4vlS5s-29" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ Execute(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="73" width="428" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-33" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;Fireball&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="428" x="1235" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-34" parent="KuKNCP4YiVl9ti4vlS5s-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ bonusCrit : float&lt;/div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="43" width="428" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-35" parent="KuKNCP4YiVl9ti4vlS5s-33" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="428" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-36" parent="KuKNCP4YiVl9ti4vlS5s-33" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ Fireball(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="73" width="428" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-37" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;FlamesOfHell&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="176" width="428" x="1226" y="-157" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-38" parent="KuKNCP4YiVl9ti4vlS5s-37" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;div&gt;+ missingHpPercent : float&lt;/div&gt;&lt;div&gt;+ effect : HealthDoT&lt;/div&gt;&lt;div&gt;- effectRuntime : HealthDoT&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="66" width="428" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-39" parent="KuKNCP4YiVl9ti4vlS5s-37" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="428" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-40" parent="KuKNCP4YiVl9ti4vlS5s-37" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ FlamesOfHell(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="73" width="428" y="103" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-41" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;Ignite&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="142" width="428" x="1224" y="-354" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-42" parent="KuKNCP4YiVl9ti4vlS5s-41" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ effect : HealthDoT&lt;/div&gt;&lt;div&gt;- effectRuntime : HealthDoT&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="45" width="428" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-43" parent="KuKNCP4YiVl9ti4vlS5s-41" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="428" y="71" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-44" parent="KuKNCP4YiVl9ti4vlS5s-41" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, _ : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ Ignite(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="428" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-45" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;Jetstream&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="142" width="428" x="1243" y="-558" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-46" parent="KuKNCP4YiVl9ti4vlS5s-45" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;div&gt;+ wetDuration : byte&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="45" width="428" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-47" parent="KuKNCP4YiVl9ti4vlS5s-45" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="428" y="71" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-48" parent="KuKNCP4YiVl9ti4vlS5s-45" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ Jetstream(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="428" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-49" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;Metastasis&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="144" width="428" x="1264" y="-764" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-50" parent="KuKNCP4YiVl9ti4vlS5s-49" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ bonusDamage : int&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="32" width="428" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-51" parent="KuKNCP4YiVl9ti4vlS5s-49" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="428" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-52" parent="KuKNCP4YiVl9ti4vlS5s-49" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, _ : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;- GetBonusDamage(damage : int) : int&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ Metastasis(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="428" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-53" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;MudPuddle&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="428" x="1281" y="-987" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-54" parent="KuKNCP4YiVl9ti4vlS5s-53" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ effect : StatDoT&lt;/div&gt;&lt;div&gt;- effectRuntime : StatDoT&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="428" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-55" parent="KuKNCP4YiVl9ti4vlS5s-53" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="428" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-56" parent="KuKNCP4YiVl9ti4vlS5s-53" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, _ : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ MudPuddle(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="43" width="428" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-57" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;MushroomSpores&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="167" width="463" x="221" y="1125" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-58" parent="KuKNCP4YiVl9ti4vlS5s-57" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ effect : HealthDoT&lt;/div&gt;&lt;div&gt;- effectRuntime : HealthDoT&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="463" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-59" parent="KuKNCP4YiVl9ti4vlS5s-57" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="463" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-60" parent="KuKNCP4YiVl9ti4vlS5s-57" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# AddDoT(effect : DoTeffect, target : HealthSystem) : void&lt;/div&gt;&lt;div&gt;# Effect(target : HealthSystem, _ : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ MushroomSpores(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="463" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-61" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;PoisonDart&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="167" width="463" x="-190" y="-385" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-62" parent="KuKNCP4YiVl9ti4vlS5s-61" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ bonusDamage : int&lt;/div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="463" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-63" parent="KuKNCP4YiVl9ti4vlS5s-61" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="463" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-64" parent="KuKNCP4YiVl9ti4vlS5s-61" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ PoisonDart(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="463" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-65" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;Punch&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="167" width="463" x="837" y="1178" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-66" parent="KuKNCP4YiVl9ti4vlS5s-65" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="463" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-67" parent="KuKNCP4YiVl9ti4vlS5s-65" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="463" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-68" parent="KuKNCP4YiVl9ti4vlS5s-65" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# SetValues() : void&lt;/div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ Punch(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="463" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-69" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;Thunderbolt&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="184" width="463" x="1274" y="-1974" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-70" parent="KuKNCP4YiVl9ti4vlS5s-69" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;div&gt;+ bonusDamage : int&lt;/div&gt;&lt;div&gt;+ stunDuration : byte&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="57" width="463" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-71" parent="KuKNCP4YiVl9ti4vlS5s-69" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="463" y="83" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-72" parent="KuKNCP4YiVl9ti4vlS5s-69" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ Thunderbolt(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="463" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-73" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;TidalWave&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="195" width="463" x="1189" y="-2203" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-74" parent="KuKNCP4YiVl9ti4vlS5s-73" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;div&gt;+ statEffect : StatDoT&lt;/div&gt;&lt;div&gt;- statEffectRuntime : StatDoT&lt;/div&gt;&lt;div&gt;+ wetDuration : byte&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="68" width="463" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-75" parent="KuKNCP4YiVl9ti4vlS5s-73" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="463" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-76" parent="KuKNCP4YiVl9ti4vlS5s-73" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ TidalWave(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="463" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-77" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;VoltaicBarrage&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="463" x="1168" y="-2449" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-78" parent="KuKNCP4YiVl9ti4vlS5s-77" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="31" width="463" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-79" parent="KuKNCP4YiVl9ti4vlS5s-77" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="463" y="57" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-80" parent="KuKNCP4YiVl9ti4vlS5s-77" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;- GetWet(target : HealthSystem) : Wet&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ VoltaicBarrage(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="463" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-81" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;InstillFear&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="188" width="463" x="1124" y="-2744" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-82" parent="KuKNCP4YiVl9ti4vlS5s-81" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ dodgeReduction : StatDoT&lt;/div&gt;&lt;div&gt;+ critReduction : StatDoT&lt;/div&gt;&lt;div&gt;- dodgeReductionRuntime : StatDoT&lt;/div&gt;&lt;div&gt;- critReductionRuntime : StatDoT&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="79" width="463" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-83" parent="KuKNCP4YiVl9ti4vlS5s-81" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="463" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-84" parent="KuKNCP4YiVl9ti4vlS5s-81" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ InstillFear(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="463" y="116" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-85" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;RejuvenatingBite&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="169" width="463" x="1141" y="-3002" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-86" parent="KuKNCP4YiVl9ti4vlS5s-85" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;+ healAmount : int&lt;/div&gt;&lt;div&gt;+ damage : int&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="463" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-87" parent="KuKNCP4YiVl9ti4vlS5s-85" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="11" width="463" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-88" parent="KuKNCP4YiVl9ti4vlS5s-85" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;# Effect(target : HealthSystem, sender : HealthSystem) : bool[]&lt;/div&gt;&lt;div&gt;- GetHealAmount(healAmount : int) : int&lt;/div&gt;&lt;div&gt;+ CopyFrom(spell : Spell) : void&lt;/div&gt;&lt;div&gt;+ RejuvenatingBite(name : string, description : string, strength : byte, selfCast : bool)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="463" y="89" as="geometry" />
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-89" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-6" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="KuKNCP4YiVl9ti4vlS5s-4" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-118" y="1126" as="sourcePoint" />
+            <mxPoint x="42" y="1126" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-90" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-10" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.351;entryY=1.027;entryDx=0;entryDy=0;entryPerimeter=0;" target="KuKNCP4YiVl9ti4vlS5s-4" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="161" y="1132" as="sourcePoint" />
+            <mxPoint x="97" y="1071" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-92" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-14" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="KuKNCP4YiVl9ti4vlS5s-2" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-406" y="268" as="sourcePoint" />
+            <mxPoint x="-246" y="268" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-93" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-28" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="KuKNCP4YiVl9ti4vlS5s-4" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1025" y="447" as="sourcePoint" />
+            <mxPoint x="1185" y="447" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-94" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-24" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.996;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" target="KuKNCP4YiVl9ti4vlS5s-4" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="933" y="739" as="sourcePoint" />
+            <mxPoint x="1093" y="739" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-95" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-32" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.007;entryY=0.263;entryDx=0;entryDy=0;entryPerimeter=0;" target="KuKNCP4YiVl9ti4vlS5s-4" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1018" y="186" as="sourcePoint" />
+            <mxPoint x="1178" y="186" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-96" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-36" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="KuKNCP4YiVl9ti4vlS5s-2" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="753" y="-193" as="sourcePoint" />
+            <mxPoint x="913" y="-193" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-97" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-40" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="KuKNCP4YiVl9ti4vlS5s-1" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="472" y="-161" as="sourcePoint" />
+            <mxPoint x="632" y="-161" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-98" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-42" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="KuKNCP4YiVl9ti4vlS5s-1" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="707" y="-232" as="sourcePoint" />
+            <mxPoint x="867" y="-232" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-99" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-48" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="KuKNCP4YiVl9ti4vlS5s-1" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="602" y="-294" as="sourcePoint" />
+            <mxPoint x="762" y="-294" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-100" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-52" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="KuKNCP4YiVl9ti4vlS5s-1" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="481" y="-481" as="sourcePoint" />
+            <mxPoint x="641" y="-481" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-101" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-56" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="KuKNCP4YiVl9ti4vlS5s-1" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="682" y="-644" as="sourcePoint" />
+            <mxPoint x="842" y="-644" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-102" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-58" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;entryX=0.16;entryY=0.986;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.217;exitY=-0.282;exitDx=0;exitDy=0;exitPerimeter=0;" target="KuKNCP4YiVl9ti4vlS5s-4" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-42" y="1053" as="sourcePoint" />
+            <mxPoint x="97" y="1064" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-103" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-18" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.003;entryY=0.238;entryDx=0;entryDy=0;entryPerimeter=0;" target="KuKNCP4YiVl9ti4vlS5s-2" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-1" y="-209" as="sourcePoint" />
+            <mxPoint x="159" y="-209" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-104" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-64" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;exitX=0.502;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.183;entryY=-0.001;entryDx=0;entryDy=0;entryPerimeter=0;" target="KuKNCP4YiVl9ti4vlS5s-1" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="3" y="-52" as="sourcePoint" />
+            <mxPoint x="163" y="-52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KuKNCP4YiVl9ti4vlS5s-105" edge="1" parent="1" source="KuKNCP4YiVl9ti4vlS5s-66" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;entryX=0.893;entryY=1.02;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.392;exitY=-0.35;exitDx=0;exitDy=0;exitPerimeter=0;" target="KuKNCP4YiVl9ti4vlS5s-4" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="1053" y="1069" as="sourcePoint" />
+            <mxPoint x="1610" y="1096" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
