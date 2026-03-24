@@ -1,0 +1,15 @@
+1. Run:
+Startim s 0 bodama
+Jdu hrat defaultni loadout
+Pokusim se hrat co nejdele
+Pojedu na prvni mape WT -> ResS -> MP
+Pojedu na druhy mape PT -> PL -> ResS
+Pojedu na treti mape PT -> RS -> TR -> TG -> RS
+2. Run:
+Koupim co nejvic z AC a SP
+Dokoupim zbytek
+Koupim elecrtic loadout a zacnu s nim
+Pokusim se hrat co nejdele
+Pojedu na prvni mape MP -> RS -> SG
+Pojedu na druhy mape BC ->  -> ResS
+Pojedu na treti mape PT -> RS -> TR -> TG -> RS
