@@ -1,11 +1,123 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.5.6">
   <diagram name="Stránka-1" id="4WY1SqapWSZHuivzEgAE">
-    <mxGraphModel dx="1281" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1830" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="66uHd7-bZwKOLe3Z2oEJ-1" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="" vertex="1">
-          <mxGeometry height="60" width="100" x="364" y="30" as="geometry" />
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-7" edge="1" parent="1" source="66uHd7-bZwKOLe3Z2oEJ-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="evdDRxYRmPFYl4Bd36aU-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="66uHd7-bZwKOLe3Z2oEJ-1" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="Začátek boje" vertex="1">
+          <mxGeometry height="60" width="100" x="20" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-17" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="evdDRxYRmPFYl4Bd36aU-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" value="Výběr kouzla (Hráč)" vertex="1">
+          <mxGeometry height="60" width="160" x="170" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Výběr kouzla (Nepřítel)" vertex="1">
+          <mxGeometry height="100" width="100" x="525" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-21" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="evdDRxYRmPFYl4Bd36aU-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="347" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-23" connectable="0" parent="evdDRxYRmPFYl4Bd36aU-21" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ano" vertex="1">
+          <mxGeometry relative="1" x="0.14" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-30" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="evdDRxYRmPFYl4Bd36aU-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="420" />
+              <mxPoint x="645" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-31" connectable="0" parent="evdDRxYRmPFYl4Bd36aU-30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ne" vertex="1">
+          <mxGeometry relative="1" x="0.0145" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-8" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Použití &amp;gt; 0" vertex="1">
+          <mxGeometry height="100" width="100" x="525" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-13" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="evdDRxYRmPFYl4Bd36aU-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Efekt kouzla&lt;div&gt;(Hráč) a připočtení jednoho tahu&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="364" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Efekt kouzla&lt;div&gt;(Nepřítel)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="200" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-26" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="evdDRxYRmPFYl4Bd36aU-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-27" connectable="0" parent="evdDRxYRmPFYl4Bd36aU-26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ne" vertex="1">
+          <mxGeometry relative="1" x="-0.136" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-28" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="evdDRxYRmPFYl4Bd36aU-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="60" />
+              <mxPoint x="740" y="585" />
+            </Array>
+            <mxPoint x="740" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-29" connectable="0" parent="evdDRxYRmPFYl4Bd36aU-28" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ano" vertex="1">
+          <mxGeometry relative="1" x="0.0705" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-24" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Nepřítelovo&lt;div&gt;životy &amp;lt; 0&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="110" x="520" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-25" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="evdDRxYRmPFYl4Bd36aU-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-37" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="evdDRxYRmPFYl4Bd36aU-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-38" connectable="0" parent="evdDRxYRmPFYl4Bd36aU-37" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ne" vertex="1">
+          <mxGeometry relative="1" x="0.08" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-40" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="evdDRxYRmPFYl4Bd36aU-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="230" />
+              <mxPoint x="140" y="780" />
+            </Array>
+            <mxPoint x="130" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-42" connectable="0" parent="evdDRxYRmPFYl4Bd36aU-40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Ano" vertex="1">
+          <mxGeometry relative="1" x="-0.2628" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-35" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="Hráčovo&lt;div&gt;životy &amp;lt; 0&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="200" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-36" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="evdDRxYRmPFYl4Bd36aU-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="Přičtení bodů" vertex="1">
+          <mxGeometry height="100" width="100" x="364" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-41" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="Konec boje" vertex="1">
+          <mxGeometry height="60" width="100" x="364" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="evdDRxYRmPFYl4Bd36aU-43" edge="1" parent="1" source="evdDRxYRmPFYl4Bd36aU-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="evdDRxYRmPFYl4Bd36aU-41">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
